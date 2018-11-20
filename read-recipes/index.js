@@ -4,7 +4,7 @@ module.exports = async function(context, req) {
   const sort = req.query.sort ? req.query.sort : 'title';
   const order = req.query.order ? req.query.order : 'asc';
   const page = req.query.page ? req.query.page : 1;
-  context.log("This is a test for pipelines - second");
+  context.log("This is a test for pipelines");
   await recipes
     .getRecipes(sort, order, page, SIZE)
     .then(data => {
